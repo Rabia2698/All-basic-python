@@ -1,14 +1,14 @@
-from tabulate import tabulate
+data = [["Alice", 24, "Engineer"],["Bob", 30, "Designer"],["Charlie", 28, "Teacher"]]
 
-# Simple example to create and display a table using tabulate
+line_dash = "-" * len(f'{"Name":<10}{"Age":<5}{"Profession":<15}')
+print(line_dash)
+print(f'{"Name":<10}{"Age":<5}{"Profession":<15}')
+print(line_dash)
 
 
-data = [
-    ["Alice", 24, "Engineer"],
-    ["Bob", 30, "Designer"],
-    ["Charlie", 28, "Teacher"]
-]
-
-headers = ["Name", "Age", "Profession"]
-
-print(tabulate(data, headers=headers, tablefmt="grid"))
+for row in data:
+    for i in range(len(data)):
+        print(f'{row[i]:<10}', end='')
+    print()
+        #print(f'{row[0]:<10}{row[1]:<10}{row[2]:<10}')
+print(line_dash)
